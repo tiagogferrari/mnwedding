@@ -15,19 +15,19 @@ export default function Navbar() {
     <>
       <nav className="absolute top-0 left-0 w-full px-4 sm:px-8 py-6 z-50 flex items-center justify-between">
         {/* Lado Esquerdo: N & M */}
-        <div className="text-white font-serif font-bold text-2xl [text-shadow:0_1px_3px_rgb(0_0_0_/_0.5)]">
+        <div className="text-white font-montserrat font-bold text-3xl [text-shadow:0_1px_3px_rgb(0_0_0_/_0.5)]">
           <Link href="#home">N & M</Link>
         </div>
 
         {/* Lado Direito: Links de Navegação (Desktop) */}
         <div className="hidden md:flex items-center gap-8 text-white [text-shadow:0_1px_3px_rgb(0_0_0_/_0.5)]">
-          <Link href="#about" className="text-lg hover:text-gray-300 font-medium transition-colors">
+          <Link href="#about" className="text-lg hover:text-gray-300 font-montserrat font-medium transition-colors">
             Sobre nós
           </Link>
-          <Link href="#gifts" className="text-lg hover:text-gray-300 font-medium transition-colors">
+          <Link href="#gifts" className="text-lg hover:text-gray-300 font-montserrat font-medium transition-colors">
             Presentes
           </Link>
-          <Link href="#place" className="text-lg hover:text-gray-300 font-medium transition-colors">
+          <Link href="#place" className="text-lg hover:text-gray-300 font-montserrat font-medium transition-colors">
             Local e Data
           </Link>
         </div>
