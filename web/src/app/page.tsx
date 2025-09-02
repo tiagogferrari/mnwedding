@@ -71,7 +71,7 @@ export default function Home() {
 
             <blockquote className="max-w-lg w-full px-8 sm:px-12 md:px-0">
               <p className="text-xl md:text-2xl italic font-serif text-gray-700">
-                Deus mudou o teu caminho até juntares com o meu e guardou a tua vida separando-a para mim. Para onde fores, irei. Onde tu repousares, repousarei. Teu Deus será o meu Deus. Teu caminho o meu será.
+                &ldquo;Deus mudou o teu caminho até juntares com o meu e guardou a tua vida separando-a para mim. Para onde fores, irei. Onde tu repousares, repousarei. Teu Deus será o meu Deus. Teu caminho o meu será.&rdquo;
               </p>
               <footer className="mt-4 text-lg font-montserrat text-gray-600">
                 – Rute 1:16-17
