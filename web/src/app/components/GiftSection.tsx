@@ -68,7 +68,7 @@ export default function GiftSection() {
                 {/* Seção PIX */}
                 <div className="flex flex-col items-center gap-3">
                     <div className="flex items-center gap-4 bg-white border border-gray-300 rounded-full px-5 py-2 shadow-sm">
-                        <span className="text-gray-700 font-mono font-montserrat text-base">{pixKey}</span>
+                        <span className="text-gray-700 font-mono font-montserrat text-base">PIX: {pixKey}</span>
                         <button
                             onClick={handleCopy}
                             className={`px-5 py-1.5 rounded-full text-white text-sm font-montserrat transition-all duration-300 ${copied ? 'bg-green-500' : 'bg-gray-800 hover:bg-gray-700'} cursor-pointer`}

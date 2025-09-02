@@ -46,13 +46,13 @@ export default function Countdown({ targetDate }: CountdownProps) {
   }, [targetDate]);
 
   return (
-    <div className="flex items-center justify-center gap-4 md:gap-8 my-6">
+    <div className="flex items-center justify-center gap-4 md:gap-10 mt-4 mb-6 sm:my-8">
       {(Object.keys(timeLeft) as Array<keyof typeof timeLeft>).map((unit) => (
-        <div key={unit} className="flex flex-col items-center justify-center bg-white/50 p-4 rounded-lg min-w-[80px]">
-          <span className="text-4xl md:text-5xl font-bold font-bree-serif text-gray-700">
+        <div key={unit} className="flex flex-col items-center justify-center bg-white/50 p-3 sm:p-6 rounded-lg min-w-[70px] sm:min-w-[100px]">
+          <span className="text-3xl sm:text-5xl md:text-6xl font-bold font-bree-serif text-gray-700">
             {timeLeft[unit]}
           </span>
-          <span className="text-sm font-montserrat text-gray-600">{timeUnits[unit]}</span>
+          <span className="text-xs sm:text-base font-montserrat text-gray-600">{timeUnits[unit]}</span>
         </div>
       ))}
     </div>

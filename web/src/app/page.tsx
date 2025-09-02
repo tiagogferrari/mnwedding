@@ -4,11 +4,10 @@ import Navbar from './components/Navbar';
 import Image from 'next/image';
 import GiftSection from './components/GiftSection';
 import Countdown from './components/Countdown';
-import homeBackground from '../../public/assets/images/home.jpg';
+import homeBackground2 from '../../public/assets/images/home.png';
 import place from '../../public/assets/images/place.jpg';
 import aliancas from '../../public/assets/images/aliancas.jpg';
 import casal from '../../public/assets/images/casal.jpg';
-import casal2 from '../../public/assets/images/casal2.jpg';
 
 export default function Home() {
   return (
@@ -18,16 +17,19 @@ export default function Home() {
         id="home"
         className="relative min-h-screen w-full flex items-center justify-center snap-start"
         style={{
-          backgroundImage: `url(${homeBackground.src})`,
+          backgroundImage: `url(${homeBackground2.src})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.8,
+          backgroundPosition: 'center bottom',
+          opacity: 1,
         }}
       >
         <Navbar />
         <div className="flex flex-col items-center text-center text-white [text-shadow:0_2px_4px_rgb(0_0_0_/_0.5)]">
-          <h1 className="text-5xl md:text-9xl font-alex-brush font-bold mb-4">
-            Nathalli & Mateus
+          <h1 className="flex flex-col sm:flex-row items-center gap-2 text-8xl sm:text-9xl md:text-[10rem] lg:text-[10rem] font-alex-brush font-bold mb-4">
+            <span>Nathalli</span>
+            <span className="hidden sm:block">&</span>
+            <span className="text-6xl sm:hidden">&</span>
+            <span>Mateus</span>
           </h1>
           <p className="text-lg md:text-5xl font-alex-brush">
             19/10/2025
@@ -37,36 +39,26 @@ export default function Home() {
 
       <section
         id="about"
-        className="min-h-screen w-full flex items-center justify-center bg-stone-100 text-gray-800 p-8 md:p-12 overflow-hidden"
+        className="min-h-screen w-full flex items-center justify-center bg-stone-100 text-gray-800 px-4 py-16 sm:p-8 md:p-12 overflow-hidden"
       >
-        <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-16 md:gap-10">
-          <div className="relative flex items-center justify-center w-full h-[500px] md:h-[600px]">
-            <div className="absolute top-0 left-8 md:left-16 transform -rotate-6 transition-transform duration-300 hover:-rotate-8 hover:scale-105 z-10">
+        <div className="max-w-8xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-16 md:gap-10">
+          <div className="relative flex items-center justify-center w-full h-[60vh] sm:h-[70vh] md:h-[80vh]">
+            <div className="absolute top-0 left-4 sm:left-8 md:left-16 transform -rotate-3 transition-transform duration-300 hover:-rotate-6 hover:scale-105 z-10">
               <div className="bg-white p-3 pb-12 shadow-lg rounded-sm">
                 <Image
                   src={casal}
                   alt="Nathalli e Mateus"
-                  className="w-56 h-56 md:w-64 md:h-64 object-cover"
+                  className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover"
                   placeholder="blur"
                 />
               </div>
             </div>
-            <div className="absolute top-4 right-8 md:right-16 transform rotate-4 transition-transform duration-300 hover:rotate-6 hover:scale-105 z-20">
-              <div className="bg-white p-3 pb-12 shadow-xl rounded-sm">
-                <Image
-                  src={casal2}
-                  alt="Nathalli e Mateus"
-                  className="w-56 h-56 md:w-64 md:h-64 object-cover"
-                  placeholder="blur"
-                />
-              </div>
-            </div>
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform rotate-1 transition-transform duration-300 hover:-rotate-1 hover:scale-105 z-30">
+            <div className="absolute bottom-30 right-2 sm:bottom-8 sm:right-8 md:right-16 transform rotate-3 transition-transform duration-300 hover:rotate-6 hover:scale-105 z-20">
               <div className="bg-white p-3 pb-12 shadow-2xl rounded-sm">
                 <Image
                   src={aliancas}
                   alt="Alianças"
-                  className="w-56 h-56 md:w-64 md:h-64 object-cover"
+                  className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover"
                   placeholder="blur"
                 />
               </div>
@@ -77,7 +69,7 @@ export default function Home() {
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-8 z-20">
             <Countdown targetDate="2025-10-19T00:00:00" />
 
-            <blockquote className="max-w-lg">
+            <blockquote className="max-w-lg w-full px-8 sm:px-12 md:px-0">
               <p className="text-xl md:text-2xl italic font-serif text-gray-700">
                 “Deus mudou o teu caminho até juntares com o meu e guardou a tua vida separando-a para mim. Para onde fores, irei. Onde tu repousares, repousarei. Teu Deus será o meu Deus. Teu caminho o meu será.”
               </p>
@@ -89,20 +81,42 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="w-full flex items-center justify-center py-8 bg-stone-100">
+        <div className="flex items-center gap-4 w-full max-w-md sm:max-w-2xl md:max-w-3xl px-4">
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-stone-400 to-transparent"></div>
+          <div className="text-stone-400 font-alex-brush text-3xl flex items-center gap-2">
+            <span>N</span>
+            <span className="text-2xl">E</span>
+            <span>M</span>
+          </div>
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-stone-400 to-transparent"></div>
+        </div>
+      </div>
       <GiftSection />
 
+      <div className="w-full flex items-center justify-center py-8 bg-stone-100">
+        <div className="flex items-center gap-4 w-full max-w-md sm:max-w-2xl md:max-w-3xl px-4">
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-stone-400 to-transparent"></div>
+          <div className="text-stone-400 font-alex-brush text-3xl flex items-center gap-2">
+            <span>N</span>
+            <span className="text-2xl">E</span>
+            <span>M</span>
+          </div>
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-stone-400 to-transparent"></div>
+        </div>
+      </div>
       {/* Seção 4: O Grande Dia (Local e Horário) */}
       <section
         id="place"
-        className="min-h-screen w-full flex items-center justify-center bg-stone-100 text-gray-800 snap-start p-4 md:p-8"
+        className="min-h-screen w-full flex items-center justify-center bg-stone-100 text-gray-800 snap-start px-4 py-16 sm:p-8 md:p-12"
       >
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-20 max-w-6xl w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20 max-w-8xl w-full">
           {/* Coluna da Esquerda: Imagem */}
           <div className="w-full lg:w-1/2">
             <Image
               src={place}
               alt="Local do Casamento"
-              className="rounded-lg shadow-xl w-full h-auto object-cover"
+              className="rounded-lg shadow-xl w-full h-[40vh] sm:h-[50vh] md:h-[60vh] object-cover"
               placeholder="blur"
             />
           </div>
