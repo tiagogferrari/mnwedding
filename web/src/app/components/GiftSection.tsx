@@ -38,7 +38,7 @@ export default function GiftSection() {
             className="min-h-screen w-full flex items-center justify-center bg-stone-100 text-gray-800 snap-start py-12 px-4"
         >
             <div className="max-w-5xl w-full text-center">
-                <h2 className="text-3xl md:text-4xl font-montserrat mb-6">Lista de Presentes</h2>
+                <h2 className="text-3xl md:text-4xl font-marcellus mb-6">Lista de Presentes</h2>
 
                 <p className="max-w-4xl mx-auto mb-8 font-montserrat text-base italic">
                     Queridos familiares e amigos, a presença de vocês neste dia tão especial é o melhor presente que poderíamos receber. Se desejarem nos presentear, ficaremos muito gratos. Com amor, Mateus e Nathalli.
