@@ -120,43 +120,47 @@ export default function Home() {
       {/* Seção 4: O Grande Dia (Local e Horário) */}
       <section
         id="place"
-        className="min-h-screen w-full flex items-center justify-center bg-stone-100 text-gray-800 snap-start px-4 pt-0 pb-16 sm:p-8 md:p-12"
+        className="min-h-screen w-full flex items-center justify-center bg-stone-100 text-gray-800 snap-start px-4 py-16 sm:px-8 md:px-12"
       >
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-20 max-w-8xl w-full">
+        {/* Grid responsivo */}
+        <div className="max-w-8xl w-full grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[auto_auto] gap-x-12 gap-y-8 items-center">
           {/* Título (Mobile) */}
-          <h2 className="lg:hidden text-4xl font-marcellus text-center mt-0 mb-0">Local do evento</h2>
-          {/* Coluna da Esquerda: Imagem */}
-          <div className="w-full lg:w-1/2">
+          <h2 className="lg:hidden text-4xl font-marcellus text-center">Local do evento</h2>
+
+          {/* Imagem (lg: Coluna 1, Linha 1) com altura controlada */}
+          <div className="w-full lg:h-[45vh] lg:col-start-1 lg:row-start-1">
             <Image
               src={place}
               alt="Local do Casamento"
-              className="rounded-lg shadow-xl w-full h-[40vh] sm:h-[50vh] md:h-[60vh] object-cover"
+              className="rounded-lg shadow-xl w-full h-full object-cover"
               placeholder="blur"
             />
           </div>
 
-          {/* Coluna da Direita: Mapa e Endereço */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-6 text-center lg:text-left">
-            <h2 className="hidden lg:block text-4xl md:text-5xl font-marcellus">Local do evento</h2>
+          {/* Texto (lg: Coluna 2, ocupa as 2 linhas) */}
+          <div className="w-full h-full lg:col-start-2 lg:row-span-2 flex flex-col gap-6 text-center lg:text-left">
+            <h2 className="hidden lg:block font-marcellus text-5xl lg:text-6xl xl:text-7xl">Local do evento</h2>
 
-            {/* Mapa do Google */}
-            <div className="order-2 lg:order-1">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.4192825717237!2d-51.224983325026805!3d-23.409216556019604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb5d8014140e41%3A0x723dc15a336a776f!2sRestaurante%20Rural%20V%C3%B3%20Tatau!5e0!3m2!1spt-BR!2sbr!4v1753753585091!5m2!1spt-BR!2sbr"
-                className="w-full aspect-video rounded-lg shadow-md border-0"
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            {/* Container para alinhar o conteúdo (AJUSTADO) */}
+            <div className="flex-grow flex flex-col justify-start lg:pt-8"> {/* Alterado de justify-center para justify-start */}
+              <div className="font-sans my-4 lg:my-0">
+                <h3 className="font-montserrat font-bold text-3xl lg:text-4xl xl:text-5xl mb-4">Restaurante Rural Vó Tatau</h3>
+                <p className="font-montserrat text-lg lg:text-xl xl:text-2xl leading-relaxed">Rodovia Mábio Gonçalves Palhano, KM 10</p>
+                <p className="font-montserrat text-lg lg:text-xl xl:text-2xl leading-relaxed">Londrina - PR, 86055-991</p>
+                <p className="font-montserrat text-lg lg:text-3xl xl:text-4xl mt-8">Data e horário: 19/10/2025 às 9:30</p>
+              </div>
             </div>
+          </div>
 
-            {/* Endereço por Escrito */}
-            <div className="font-sans order-1 lg:order-2 my-4 lg:my-0">
-              <h3 className="text-2xl font-bold font-montserrat mb-2">Restaurante Rural Vó Tatau</h3>
-              <p className="text-sm font-montserrat">Rodovia Mábio Gonçalves Palhano, KM 10</p>
-              <p className="text-sm font-montserrat">Londrina - PR, 86055-991</p>
-              <p className="text-lg font-montserrat mt-4">Data e horário: 19/10/2025 às 9:30</p>
-            </div>
+          {/* Mapa (lg: Coluna 1, Linha 2) com altura controlada */}
+          <div className="w-full lg:h-[30vh] lg:col-start-1 lg:row-start-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.4192825717237!2d-51.224983325026805!3d-23.409216556019604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb5d8014140e41%3A0x723dc15a336a776f!2sRestaurante%20Rural%20V%C3%B3%20Tatau!5e0!3m2!1spt-BR!2sbr!4v1753753585091!5m2!1spt-BR!2sbr"
+              className="w-full h-full rounded-lg shadow-md border-0"
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
